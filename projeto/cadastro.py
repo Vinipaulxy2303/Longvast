@@ -1,20 +1,26 @@
+from limpa_tudo import limpatela
 def cadastro():
     timer=1
     codigo= []
     entregas= []
     for i in range(4):
         sistema= True
-        codigos=int(input("Me de um codigo: "))
-        if timer > 1:
-            while sistema == True:
-                if codigos in codigo:
-                    print("Repetido!")
-                    codigos=int(input("Me de um codigo: "))
-                else:
-                    sistema = False
-                    codigo.append(codigos) 
-        else:
-            codigo.append(codigos)      
+        codigo_texto = input("Me de um codigo: ")
+        while not codigo_texto.isdigit():
+            print("Digite só números!")
+            codigo_texto = input("Me de um codigo: ")
+        codigos = int(codigo_texto)
+        if codigos != int :
+            if timer > 1:
+                while sistema == True:
+                    if codigos in codigo:
+                        print("Repetido!")
+                        codigos=int(input("Me de um codigo: "))
+                    else:
+                        sistema = False
+                        codigo.append(codigos) 
+            else:
+                codigo.append(codigos)      
         nome_ou_descrição_do_destinatário=str(input("Qual o nome : "))
         região_de_origem =str(input("Qual a região de origem: "))
         região_de_destinada =str(input("Qual é o destino final: "))
@@ -35,12 +41,10 @@ def cadastro():
                 elif status == "Indisponivel":
                     print("Status Regristrado")
         custo_estimado_da_entrega =float(input("Qual é o valor estimado para a entrega: "))
-        print("==============================")
-        opcao=input("Digite Qualquer coisa!")
+        print(limpatela())
+
         timer += 1
         entrega={"Codigo": codigos ,"nome ou descrição do destinatário" : nome_ou_descrição_do_destinatário ,"região de origem": região_de_origem,"região de destinada": região_de_destinada,"peso da carga": peso_da_carga,"valor da mercadoria": valor_da_mercadoria,"prioridade":prioridade,"distância": distância,"status": status,"custo estimado da entrega":custo_estimado_da_entrega}
         entregas.append(entrega) 
     return entregas
-    
-
-cadastro()
+print(cadastro())
