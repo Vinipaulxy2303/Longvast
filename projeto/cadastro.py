@@ -6,7 +6,7 @@ def cadastro():
     for i in range(4):
         sistema= True
         codigo_texto = input("Me de um codigo: ")
-        while not codigo_texto.isdigit():
+        while not codigo_texto.isdigit() or int(codigo_texto) <1:
             print("Digite só números!")
             codigo_texto = input("Me de um codigo: ")
         codigos = int(codigo_texto)
@@ -18,8 +18,8 @@ def cadastro():
                 else:
                     sistema = False
                     codigo.append(codigos) 
-            else:
-                codigo.append(codigos)      
+        else:
+            codigo.append(codigos)      
         nome_ou_descrição_do_destinatário=str(input("Qual o nome : "))
         codigo_texto =input("""Qual a região de origem: 
 1. Centro
@@ -61,11 +61,13 @@ def cadastro():
         status= int(codigo_texto)
         print('Status registrado!!')
         custo_estimado_da_entrega =float(input("Qual é o valor estimado para a entrega: "))
-        print(limpatela())
-
+        codigo_texto = input("Qual a distância total: ")
+        while not codigo_texto.isdigit():
+                print("Digite só números!")
+                codigo_texto = input("Qual a distância total: ")
+        distancia=int(codigo_texto)
+        limpatela()
         timer += 1
-        entrega={"Codigo": codigos ,"nome ou descrição do destinatário" : nome_ou_descrição_do_destinatário ,"região de origem": região_de_origem,"região de destinada": destino_final,"peso da carga": peso_da_carga,"valor da mercadoria": valor_da_mercadoria,"prioridade":prioridade,"distância": distância,"status": status,"custo estimado da entrega":custo_estimado_da_entrega}
+        entrega={"Codigo": codigos ,"nome ou descrição do destinatário" : nome_ou_descrição_do_destinatário ,"região de origem": região_de_origem,"região de destinada": destino_final,"peso da carga": peso_da_carga,"valor da mercadoria": valor_da_mercadoria,"prioridade":prioridade,"distância": distancia,"status": status,"custo estimado da entrega":custo_estimado_da_entrega}
         entregas.append(entrega) 
     return entregas
-
-print(cadastro())
