@@ -95,7 +95,8 @@ def cadastro():
             entregas.append(entrega) 
         elif sn == 'nao':
             sistema0 = True
-            mostrar_cadastro()
+            mostrar_cadastro(entregas)
             opcao=input("Só apertar enter")
             limpatela()
             esperar()
+    return entregas
