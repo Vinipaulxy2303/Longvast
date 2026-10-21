@@ -1,4 +1,4 @@
-from cadastro import entregas
+from mostrar_cadastro import entregas
 def mostrar_cadastro():
     for chave, valor in entregas.items():
         print(f"{chave}: {valor}")
