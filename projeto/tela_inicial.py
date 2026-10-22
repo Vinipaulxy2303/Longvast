@@ -22,10 +22,10 @@ def tela_inicial():
         cadastro()
     elif escolha==2:
         limpatela()
-    elif escolha==3:
+    elif escolha==10:
         limpatela()
         print("Adeus!!!")
 
     return(escolha)
 
-print(tela_inicial())
+tela_inicial()

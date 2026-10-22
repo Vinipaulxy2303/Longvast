@@ -19,6 +19,7 @@ def cadastro():
                 print("Digite só números!")
                 codigo_texto = input("Me de um codigo: ")
             codigos = int(codigo_texto)
+            sistema = True
             if timer > 1:
                 while sistema == True:
                     if codigos in codigo:
