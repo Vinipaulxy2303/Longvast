@@ -53,7 +53,7 @@ def cadastro():
                 print('Opção Invalida!')
                 codigo_texto=input("Qual é o destino final: ")
             destino_final=int(codigo_texto)
-            peso_da_carga =float(input("QUal é o peso da carga: "))
+            peso_da_carga =float(input("QUal é o peso da carga (Kg): "))
             valor_da_mercadoria =float(input("Qual é o valor de mercado: "))
             print("""1 - Urgente
 2 - Prioritária
