@@ -1,8 +1,9 @@
 from tela_inicial import tela_inicial
 continuar = True
 entregas = []
+codigo = []
 while continuar == True:
-    escolha, entregas = tela_inicial(entregas)
+    codigo, escolha, entregas = tela_inicial(entregas)
     if escolha ==  10:
         continuar = False
     else:
