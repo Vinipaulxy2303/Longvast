@@ -94,4 +94,4 @@ Qual é o destino final: """)
             entregas.append(entrega) 
         elif sn == 'nao':
             sistema0 = True            
-    return entregas
+    return entregas, codigo
