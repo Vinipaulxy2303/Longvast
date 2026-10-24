@@ -36,7 +36,7 @@ def cadastro():
 3. Sul
 4. Leste
 5. Oeste
-            Qual a região de origem: """)
+Qual a região de origem: """)
             while not codigo_texto.isdigit() or int(codigo_texto) < 1 or int(codigo_texto) > 5:
                 print('Opção Invalida')
                 codigo_texto=input("Qual a região de origem: ")
@@ -46,7 +46,7 @@ def cadastro():
 3. Sul
 4. Leste
 5. Oeste
-            Qual é o destino final: """)
+Qual é o destino final: """)
             while not codigo_texto.isdigit() or int(codigo_texto) < 1 or int(codigo_texto) > 5:
                 print('Opção Invalida!')
                 codigo_texto=input("Qual é o destino final: ")
