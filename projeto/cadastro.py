@@ -100,4 +100,5 @@ def cadastro():
             opcao=input("Só apertar enter")
             limpatela()
             esperar()
+            limpatela()
     return entregas
