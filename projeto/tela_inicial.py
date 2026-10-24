@@ -1,7 +1,7 @@
 from mostrar_cadastro import mostrar_cadastro
 from cadastro import cadastro
 from limpa_tudo import limpatela
-def tela_inicial(entregas, escolha):
+def tela_inicial(entregas):
     print("""            Longvast-Sistema Inteligente de Gerenciamento de Entregas
 1. Cadastrar entrega
 2. Listar entregas
@@ -28,4 +28,4 @@ def tela_inicial(entregas, escolha):
         limpatela()
         print("Adeus!!!")
 
-    return(escolha)
+    return escolha, entregas
