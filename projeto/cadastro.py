@@ -31,24 +31,24 @@ def cadastro():
             else:
                 codigo.append(codigos)      
             nome_ou_descrição_do_destinatário=str(input("Qual o nome : "))
-            codigo_texto =input("""Qual a região de origem: 
-            1. Centro
-            2. Norte
-            3. Sul
-            4. Leste
-            5. Oeste
-            """)
+            codigo_texto =input("""
+1. Centro
+2. Norte
+3. Sul
+4. Leste
+5. Oeste
+            Qual a região de origem: """)
             while not codigo_texto.isdigit() or int(codigo_texto) < 1 or int(codigo_texto) > 5:
                 print('Opção Invalida')
                 codigo_texto=input("Qual a região de origem: ")
             região_de_origem= int(codigo_texto)
-            codigo_texto =input("""Qual é o destino final: 
-            1. Centro
-            2. Norte
-            3. Sul
-            4. Leste
-            5. Oeste
-            """)
+            codigo_texto =input("""
+1. Centro
+2. Norte
+3. Sul
+4. Leste
+5. Oeste
+            Qual é o destino final: """)
             while not codigo_texto.isdigit() or int(codigo_texto) < 1 or int(codigo_texto) > 5:
                 print('Opção Invalida!')
                 codigo_texto=input("Qual é o destino final: ")
