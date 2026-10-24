@@ -31,8 +31,7 @@ def cadastro():
             else:
                 codigo.append(codigos)      
             nome_ou_descrição_do_destinatário=str(input("Qual o nome : "))
-            codigo_texto =input("""
-1. Centro
+            codigo_texto =input("""1. Centro
 2. Norte
 3. Sul
 4. Leste
@@ -42,8 +41,7 @@ def cadastro():
                 print('Opção Invalida')
                 codigo_texto=input("Qual a região de origem: ")
             região_de_origem= int(codigo_texto)
-            codigo_texto =input("""
-1. Centro
+            codigo_texto =input("""1. Centro
 2. Norte
 3. Sul
 4. Leste
