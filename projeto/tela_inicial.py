@@ -29,5 +29,3 @@ def tela_inicial():
         print("Adeus!!!")
 
     return(escolha)
-
-tela_inicial()
