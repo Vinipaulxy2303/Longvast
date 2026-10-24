@@ -1,3 +1,4 @@
+from espera import esperar
 def mostrar_cadastro(entregas):
     for entrega in entregas :
         for chave, valor in entrega.items():
@@ -12,3 +13,5 @@ def mostrar_cadastro(entregas):
             else:
                print(f"{chave}: {valor}")
         print("-" * 30)
+        opcao=input("Só apertar enter")
+        esperar()
