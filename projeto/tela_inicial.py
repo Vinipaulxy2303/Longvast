@@ -1,3 +1,4 @@
+from mostrar_cadastro import mostrar_cadastro
 from cadastro import cadastro
 from limpa_tudo import limpatela
 def tela_inicial():
@@ -22,6 +23,7 @@ def tela_inicial():
         cadastro()
     elif escolha==2:
         limpatela()
+        mostrar_cadastro()
     elif escolha==10:
         limpatela()
         print("Adeus!!!")
