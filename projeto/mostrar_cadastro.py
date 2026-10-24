@@ -1,4 +1,4 @@
-from espera import esperar
+from limpa_tudo import limpatela
 def mostrar_cadastro(entregas):
     for entrega in entregas :
         for chave, valor in entrega.items():
@@ -14,4 +14,4 @@ def mostrar_cadastro(entregas):
                print(f"{chave}: {valor}")
         print("-" * 30)
         opcao=input("Só apertar enter")
-        esperar()
+        limpatela()
