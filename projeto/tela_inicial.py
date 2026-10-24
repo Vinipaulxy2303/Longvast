@@ -23,7 +23,7 @@ def tela_inicial():
         entregas = cadastro()
     elif escolha==2:
         limpatela()
-        entregas = mostrar_cadastro()
+        mostrar_cadastro(entregas)
     elif escolha==10:
         limpatela()
         print("Adeus!!!")
