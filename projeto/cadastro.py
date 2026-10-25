@@ -27,7 +27,8 @@ def cadastro(entregas, codigo):
                         sistema = False
                         codigo.append(codigos) 
             else:
-                codigo.append(codigos)      
+                if not codigos in codigo:
+                    codigo.append(codigos)      
             nome_ou_descrição_do_destinatário=str(input("Qual o nome : "))
             codigo_texto =input("""1. Centro
 2. Norte
