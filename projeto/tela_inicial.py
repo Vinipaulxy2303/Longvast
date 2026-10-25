@@ -20,7 +20,7 @@ def tela_inicial(entregas, codigo):
     escolha= int(codigo_texto)
     if escolha == 1:
         limpatela()
-        entregas, codigo = cadastro()
+        entregas, codigo = cadastro(entregas, codigo)
     elif escolha==2:
         limpatela()
         mostrar_cadastro(entregas)

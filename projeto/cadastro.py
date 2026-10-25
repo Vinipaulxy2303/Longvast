@@ -1,11 +1,9 @@
 from limpa_tudo import limpatela
 from mostrar_cadastro import mostrar_cadastro
 from espera import esperar
-def cadastro():
+def cadastro(entregas, codigo):
     print("====== CADASTRO DE ENTREGA ======  ")
     timer=1
-    codigo= []
-    entregas= []
     sistema0= False
     while sistema0 == False:
         codigo_texto=input("Qual a sua escolha: (sim / nao) ")
