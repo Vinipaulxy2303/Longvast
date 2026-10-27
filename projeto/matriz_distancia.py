@@ -10,6 +10,6 @@ matriz_distancias = [
 print(matriz_distancias[0][1])
 
 def mostrar():
-    print(matriz_distancias)
+    for linha in matriz_distancias:
+        print(matriz_distancias)
     opcao=input("Só selecionar ENTER!!")
-    
