@@ -22,7 +22,7 @@ def tela_inicial(entregas, codigo,região_de_origem,destino_final):
     escolha= int(codigo_texto)
     if escolha == 1:
         limpatela()
-        região_de_origem,destino_final, entregas, codigo = cadastro(região_de_origem,destino_final,entregas, codigo)
+        entregas, codigo = cadastro(região_de_origem,destino_final,entregas, codigo)
     elif escolha==2:
         limpatela()
         mostrar_cadastro(entregas)
