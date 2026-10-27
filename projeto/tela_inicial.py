@@ -34,4 +34,4 @@ def tela_inicial(entregas, codigo):
         limpatela()
         print("Adeus!!!")
 
-    return escolha, entregas, codigo, região_origem, destino_final
+    return escolha, entregas, codigo, região_de_origem, destino_final
