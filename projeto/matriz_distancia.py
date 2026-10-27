@@ -1,6 +1,6 @@
 
 regioes = ["Centro", "Norte", "Sul", "Leste", "Oeste"]
-def destino_total(destino_final, região_de_origem):
+def destino_total(região_de_origem,  destino_final):
     matriz_distancias = [
         [0, 12, 15, 10, 14] ,#"Centro"
         [ 12, 0, 25, 18, 20] ,  #"Norte",
@@ -8,7 +8,7 @@ def destino_total(destino_final, região_de_origem):
         [10, 18, 16, 0, 22] ,  #"Leste",
         [14, 20, 19, 22, 0] ,#"Oeste"
     ]
-    distancia=matriz_distancias[destino_final, região_de_origem]
+    distancia=matriz_distancias(região_de_origem,  destino_final)
     return distancia
 
 def mostrar():

@@ -3,7 +3,7 @@ from matriz_distancia import mostrar
 from mostrar_cadastro import mostrar_cadastro
 from cadastro import cadastro
 from limpa_tudo import limpatela
-def tela_inicial(entregas, codigo):
+def tela_inicial(entregas, codigo,região_de_origem,destino_final):
     print("""            Longvast-Sistema Inteligente de Gerenciamento de Entregas
 1. Cadastrar entrega
 2. Listar entregas
