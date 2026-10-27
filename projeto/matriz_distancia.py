@@ -9,7 +9,7 @@ matriz_distancias = [
 ]
 
 def mostrar():
-        print("======= MATRIZ DE DISTÂNCIA =======")
+        print("======= MATRIZ DE DISTÂNCIA ==============")
         print("""Centro  Norte  Sul  Leste  Oeste
     0        12    15    10    14    Centro
     12       0     25    18    20    Norte
