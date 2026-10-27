@@ -1,3 +1,4 @@
+from matriz_distancia import mostrar
 from mostrar_cadastro import mostrar_cadastro
 from cadastro import cadastro
 from limpa_tudo import limpatela
@@ -24,6 +25,9 @@ def tela_inicial(entregas, codigo):
     elif escolha==2:
         limpatela()
         mostrar_cadastro(entregas)
+    elif escolha == 7:
+        limpatela()
+        mostrar()
     elif escolha==10:
         limpatela()
         print("Adeus!!!")

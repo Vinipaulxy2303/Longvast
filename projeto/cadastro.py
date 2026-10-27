@@ -88,10 +88,3 @@ Qual é o destino final: """)
         elif sn == 'nao':
             sistema0 = True            
     return entregas, codigo
-#  tODO: revisar bloco if timer>1 / else em cadastro.py
-# - o else duplicou o loop do if, mas ficou com bug: "while sistema == True"
-#   nunca muda "sistema" pra False aqui dentro -> pode travar em loop infinito
-# - pensar se dá pra unificar os dois blocos (if/else) num só,
-#   já que a lógica de verificar repetido devia ser igual nos dois casos
-# - revisar se "timer" ainda faz sentido existir depois que codigo
-#   passou a vir como parâmetro (pode já chegar com dados antigos)

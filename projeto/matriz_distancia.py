@@ -8,3 +8,6 @@ matriz_distancias = [
     [14, 20, 19, 22, 0]    # Oeste
 ]
 print(matriz_distancias[0][1])
+
+def mostrar():
+    print(matriz_distancias)
