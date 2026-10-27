@@ -3,7 +3,6 @@ from mostrar_cadastro import mostrar_cadastro
 from espera import esperar
 def cadastro(entregas, codigo):
     print("====== CADASTRO DE ENTREGA ======  ")
-    timer=1
     sistema0= False
     while sistema0 == False:
         codigo_texto=input("Qual a sua escolha: (sim / nao) ")
@@ -18,21 +17,13 @@ def cadastro(entregas, codigo):
                 codigo_texto = input("Me de um codigo: ")
             codigos = int(codigo_texto)
             sistema = True
-            if timer > 1:
-                while sistema == True:
-                    if codigos in codigo:
-                        print("Repetido!")
-                        codigos=int(input("Me de um codigo: "))
-                    else:
-                        sistema = False
-                        codigo.append(codigos) 
-            else:
-                if not codigos in codigo:
-                        while sistema == True:
-                            if codigos in codigo:
-                                print("Repetido!")
-                                codigos=int(input("Me de um codigo: "))
-                        codigo.append(codigos)      
+            while sistema == True:
+                if codigos in codigo:
+                    print("Repetido!")
+                    codigos=int(input("Me de um codigo: "))
+                else:
+                    sistema = False
+                    codigo.append(codigos) 
             nome_ou_descrição_do_destinatário=str(input("Qual o nome : "))
             codigo_texto =input("""1. Centro
 2. Norte
@@ -81,8 +72,7 @@ Qual é o destino final: """)
                     print("Digite só números!")
                     codigo_texto = input("Qual a distância total: ")
             distancia=int(codigo_texto)
-            limpatela()
-            timer += 1
+            limpatela() 
             entrega={"Codigo": codigos ,
                      "nome ou descrição do destinatário" : nome_ou_descrição_do_destinatário ,
                      "região de origem": região_de_origem,
