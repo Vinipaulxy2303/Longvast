@@ -3,7 +3,7 @@ continuar = True
 entregas =[]
 codigo= []
 while continuar == True:
-    escolha, entregas , codigo = tela_inicial(entregas, codigo)
+    região_de_origem, destino_final,distancia ,escolha, entregas , codigo = tela_inicial(entregas, codigo)
     if escolha ==  10:
         continuar = False
     else:
