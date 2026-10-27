@@ -1,4 +1,4 @@
-regioes = ("Centro", "Norte", "Sul", "Leste", "Oeste")
+regioes = ["Centro", "Norte", "Sul", "Leste", "Oeste"]
 
 matriz_distancias = [
     [0, 12, 15, 10, 14] ,#"Centro"
@@ -9,7 +9,7 @@ matriz_distancias = [
 ]
 
 def mostrar():
-    print(regioes)
+    print("Centro", "Norte", "Sul", "Leste", "Oeste")
     for linha in matriz_distancias:
         print(*linha)
     opcao=input("Só selecionar ENTER!!")
