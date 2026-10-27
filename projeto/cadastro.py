@@ -1,4 +1,4 @@
-from matriz_distancia import destino_total
+from mostrar_cadastro import distancia_total
 from limpa_tudo import limpatela
 from mostrar_cadastro import mostrar_cadastro
 from espera import esperar
@@ -70,7 +70,7 @@ Qual é o destino final: """)
             status= int(codigo_texto)
             print('Status registrado!!')
             custo_estimado_da_entrega =float(input("Qual é o valor estimado para a entrega: "))
-            distancia=input("Qual a distância total: ")
+            distancia= distancias
             limpatela() 
             entrega={"Codigo": codigos ,
                      "nome ou descrição do destinatário" : nome_ou_descrição_do_destinatário ,

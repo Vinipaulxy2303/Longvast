@@ -8,8 +8,8 @@ def destino_total(região_de_origem,  destino_final):
         [10, 18, 16, 0, 22] ,  #"Leste",
         [14, 20, 19, 22, 0] ,#"Oeste"
     ]
-    distancia=matriz_distancias(região_de_origem,  destino_final)
-    return distancia
+    distancias=matriz_distancias[região_de_origem][destino_final]
+    return distancias
 
 def mostrar():
         print("======= MATRIZ DE DISTÂNCIA ==============")
