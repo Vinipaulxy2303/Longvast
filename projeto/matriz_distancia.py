@@ -7,9 +7,8 @@ matriz_distancias = [
     [10, 18, 16, 0, 22],   # Leste
     [14, 20, 19, 22, 0]    # Oeste
 ]
-print(matriz_distancias[0][1])
 
 def mostrar():
     for linha in matriz_distancias:
-        print(matriz_distancias)
+        print(*linha)
     opcao=input("Só selecionar ENTER!!")
