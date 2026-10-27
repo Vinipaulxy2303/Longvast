@@ -1,12 +1,15 @@
-regioes = ["Centro", "Norte", "Sul", "Leste", "Oeste"]
 
-matriz_distancias = [
-    [0, 12, 15, 10, 14] ,#"Centro"
-    [ 12, 0, 25, 18, 20] ,  #"Norte",
-    [  15, 25, 0, 16, 19] ,  #"Sul",
-    [10, 18, 16, 0, 22] ,  #"Leste",
-    [14, 20, 19, 22, 0] ,#"Oeste"
-]
+regioes = ["Centro", "Norte", "Sul", "Leste", "Oeste"]
+def destino_total(destino_final, região_inicial):
+    matriz_distancias = [
+        [0, 12, 15, 10, 14] ,#"Centro"
+        [ 12, 0, 25, 18, 20] ,  #"Norte",
+        [  15, 25, 0, 16, 19] ,  #"Sul",
+        [10, 18, 16, 0, 22] ,  #"Leste",
+        [14, 20, 19, 22, 0] ,#"Oeste"
+    ]
+    distancia=matriz_distancias[destino_final, região_inicial]
+    return distancia
 
 def mostrar():
         print("======= MATRIZ DE DISTÂNCIA ==============")

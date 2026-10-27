@@ -1,3 +1,4 @@
+from matriz_distancia import destino_total
 from matriz_distancia import mostrar
 from mostrar_cadastro import mostrar_cadastro
 from cadastro import cadastro
@@ -21,15 +22,16 @@ def tela_inicial(entregas, codigo):
     escolha= int(codigo_texto)
     if escolha == 1:
         limpatela()
-        entregas, codigo = cadastro(entregas, codigo)
+        região_origem,destino_final, entregas, codigo = cadastro(região_origem,destino_final,entregas, codigo)
     elif escolha==2:
         limpatela()
         mostrar_cadastro(entregas)
     elif escolha == 7:
         limpatela()
+        região_origem,destino_final,destino=destino_total(região_origem,destino_final,destino)
         mostrar()
     elif escolha==10:
         limpatela()
         print("Adeus!!!")
 
-    return escolha, entregas, codigo
+    return escolha, entregas, codigo, região_origem, destino_final
