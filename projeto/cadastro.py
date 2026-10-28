@@ -48,7 +48,11 @@ Qual é o destino final: """)
                 codigo_texto=input("Qual é o destino final: ")
             destino_final=int(codigo_texto)
             destino_final -= 1
-            peso_da_carga =float(input("QUal é o peso da carga (Kg): "))
+            codigo_texto=float(input("QUal é o peso da carga (Kg): "))
+            while not codigo_texto.isdigit() or float(codigo_texto) < 1:
+                            print('Opção Invalida!')
+                            codigo_texto=input("Qual é o destino final: ")
+            peso_da_carga=float(codigo_texto) 
             valor_da_mercadoria =float(input("Qual é o valor de mercado: "))
             print("""1 - Urgente
 2 - Prioritária
@@ -69,8 +73,12 @@ Qual é o destino final: """)
                 codigo_texto= input("Qual é o status atual? ")
             status= int(codigo_texto)
             print('Status registrado!!')
-            custo_estimado_da_entrega =float(input("Qual é o valor estimado para a entrega: "))
             distancia = destino_total(região_de_origem,destino_final)
+            Custo-base = distancia  # Tem que terminar isso!!!
+            if peso_da_carga <= 5:
+                custo_estimado_da_entrega=0
+            elif peso_da_carga > 5 and peso_da_carga <= 20:
+                    custo_estimado_da_entrega 
             limpatela() 
             entrega={"Codigo": codigos ,
                      "nome ou descrição do destinatário" : nome_ou_descrição_do_destinatário ,
