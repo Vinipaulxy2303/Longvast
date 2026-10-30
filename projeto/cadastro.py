@@ -74,25 +74,26 @@ Qual é o destino final: """)
             status= int(codigo_texto)
             print('Status registrado!!')
             distancia = destino_total(região_de_origem,destino_final)
+            valor_por_km=2.50
             if peso_da_carga <= 5:
                 custo_estimado_da_entrega=0
-                Custo_base = distancia + custo_estimado_da_entrega   # Tem que terminar isso!!!
+                Custo_base = (distancia*valor_por_km) + custo_estimado_da_entrega   
             elif peso_da_carga > 5 and peso_da_carga <= 20:
                     custo_estimado_da_entrega= 10/100
-                    Custo_base= distancia +(valor_da_mercadoria* custo_estimado_da_entrega)
+                    Custo_base= ((distancia *valor_por_km)+ ((distancia*valor_por_km) *custo_estimado_da_entrega))
             elif peso_da_carga > 20 and peso_da_carga <= 50:
                  custo_estimado_da_entrega= 20/100
-                 Custo_base= distancia + (valor_da_mercadoria* custo_estimado_da_entrega)
+                 Custo_base= ((distancia * valor_por_km)+ ((distancia*valor_por_km) *custo_estimado_da_entrega))
             elif peso_da_carga > 50:
                  custo_estimado_da_entrega=35/100
-                 Custo_base= distancia + (valor_da_mercadoria* custo_estimado_da_entrega)
+                 Custo_base= ((distancia *valor_por_km)+ ((distancia*valor_por_km) *custo_estimado_da_entrega))
 
             if prioridade == 3:
-                 Custo_base + (Custo_base*0)
+                Custo_base=Custo_base + (Custo_base*0)
             elif prioridade == 2:
-                Custo_base + (Custo_base*15/100)
-            elif prioridade == 1:       #tem que terminar isso 
-                 Custo_base + (Custo_base*30/100)
+                Custo_base=Custo_base + (Custo_base*15/100)
+            elif prioridade == 1:      
+                Custo_base=Custo_base + (Custo_base*30/100)
             limpatela() 
             entrega={"Codigo": codigos ,
                      "nome ou descrição do destinatário" : nome_ou_descrição_do_destinatário ,
