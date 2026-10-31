@@ -23,12 +23,13 @@ def tela_inicial(entregas, codigo):
     if escolha == 1:
         limpatela()
         entregas, codigo = cadastro(entregas, codigo)
+        ultima_entrega = entregas[-1]
+        print("Distância calculada:", ultima_entrega["distância"], "Km")
     elif escolha==2:
         limpatela()
         mostrar_cadastro(entregas)
     elif escolha == 7:
         limpatela()
-        região_de_origem,destino_final,destino=destino_total(região_de_origem,destino_final,destino)
         mostrar()
     elif escolha==10:
         limpatela()

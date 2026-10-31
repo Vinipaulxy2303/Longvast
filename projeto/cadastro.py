@@ -48,12 +48,22 @@ Qual é o destino final: """)
                 codigo_texto=input("Qual é o destino final: ")
             destino_final=int(codigo_texto)
             destino_final -= 1
-            codigo_texto=float(input("QUal é o peso da carga (Kg): "))
-            while not codigo_texto.isdigit() or float(codigo_texto) < 1:
-                            print('Opção Invalida!')
-                            codigo_texto=input("Qual é o destino final: ")
-            peso_da_carga=float(codigo_texto) 
-            valor_da_mercadoria =float(input("Qual é o valor de mercado: "))
+            while True:
+                try:
+                    texto=input('Qual é o valor da mercadoria?')
+                    texto=texto.replace(",",".")
+                    valor_da_mercadoria=float(texto)
+                    break
+                except ValueError:
+                    print("Você digitou errado tente novamente.")
+            while True:
+                try:
+                   text=input('Qual é o peso em (kg): ') 
+                   text=text.replace(',','.')
+                   peso_da_carga=float(text)
+                   break
+                except ValueError:
+                    print("Você digitou errado, tente novamente!!")
             print("""1 - Urgente
 2 - Prioritária
 3 - Normal
@@ -78,6 +88,7 @@ Qual é o destino final: """)
             #     print("Status Invalido!")
             #     codigo_texto= input("Qual é o status atual? ")
             status= 'Aguardando'
+
             distancia = destino_total(região_de_origem,destino_final)
             valor_por_km=2.50
             if peso_da_carga <= 5:

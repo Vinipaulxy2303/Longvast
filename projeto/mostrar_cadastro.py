@@ -1,17 +1,25 @@
 from limpa_tudo import limpatela
 def mostrar_cadastro(entregas):
-    for entrega in entregas :
+    for entrega in entregas:
         for chave, valor in entrega.items():
             if chave == "peso da carga":
-                print(f"{chave}:{valor} Kg")
+                valor_formatado = f"{valor:.2f}".replace(".", ",")
+                print(f"{chave}: {valor_formatado} Kg")
+
             elif chave == "valor da mercadoria":
-                print(f"{chave}:R${valor}")
+                valor_formatado = f"{valor:.2f}".replace(".", ",")
+                print(f"{chave}: R$ {valor_formatado}")
+
             elif chave == "distância":
-                print(f"{chave}:{valor} Km")
+                print(f"{chave}: {valor} Km")
+
             elif chave == "custo estimado da entrega":
-                print(f"{chave}:R${valor}")
+                valor_formatado = f"{valor:.2f}".replace(".", ",")
+                print(f"{chave}: R$ {valor_formatado}")
+
             else:
-               print(f"{chave}: {valor}")
+                print(f"{chave}: {valor}")
+
         print("-" * 30)
         opcao=input("Só apertar enter")
         limpatela()
