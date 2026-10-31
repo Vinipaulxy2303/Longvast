@@ -63,16 +63,21 @@ Qual é o destino final: """)
                 print("Prioridade Invalida!")
                 codigo_texto=input("Qual a sua prioridade: ")
             prioridade= int(codigo_texto)
-            print("""1 - Aguardando
-2 - Em transporte
-3 - Entregue
-""")
-            codigo_texto= input("Qual é status atual? ")
-            while not codigo_texto.isdigit() or int(codigo_texto) <1 or int(codigo_texto) > 3:
-                print("Status Invalido!")
-                codigo_texto= input("Qual é o status atual? ")
-            status= int(codigo_texto)
-            print('Status registrado!!')
+            if prioridade == 1:
+                 prioridade = 'Urgente'
+            elif prioridade == 2:
+                 prioridade = 'Prioritária'
+            else:
+                 prioridade = 'Normal'
+#             print("""1 - Aguardando
+# #2 - Em transporte
+# #3 - Entregue
+# """)
+            # codigo_texto= input("Qual é status atual? ")
+            # while not codigo_texto.isdigit() or int(codigo_texto) <1 or int(codigo_texto) > 3:
+            #     print("Status Invalido!")
+            #     codigo_texto= input("Qual é o status atual? ")
+            status= 'Aguardando'
             distancia = destino_total(região_de_origem,destino_final)
             valor_por_km=2.50
             if peso_da_carga <= 5:
