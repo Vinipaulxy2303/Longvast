@@ -1,6 +1,5 @@
 from matriz_distancia import destino_total
 from limpa_tudo import limpatela
-from mostrar_cadastro import mostrar_cadastro
 from espera import esperar
 def cadastro(entregas, codigo):
     print("====== CADASTRO DE ENTREGA ======  ")
