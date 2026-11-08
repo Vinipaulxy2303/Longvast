@@ -1,10 +1,12 @@
 from limpa_tudo import limpatela
 def mostrar_cadastro(entregas):
     sistema0= False
-    print("""
-========== LISTAR ENTREGAS ==========""")
     while sistema0 == False:
-        codigo_texto=input("Qual a sua escolha: (sim / nao) ")
+        print("""
+========== LISTAR ENTREGAS ==========""")
+        codigo_texto=input("""
+Você quer procurar algum codigo?        
+Qual a sua escolha: (sim / nao) """)
         while not codigo_texto.isalnum():
                 print('Escolha inexistente')
                 codigo_texto=input("Qual a sua escolha: ")
@@ -44,11 +46,15 @@ def mostrar_cadastro(entregas):
                         print("-" * 30)
                         input("Só apertar enter")
                         limpatela()
+                        return
+                    
                             
                     except ValueError:
                         print("tente novamente")
                         input("Só apertar enter")
+                        break
                         limpatela()
+
         elif sn == 'nao':
              sistema0 = True 
              limpatela() 
