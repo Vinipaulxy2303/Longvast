@@ -3,7 +3,7 @@ def mostrar_cadastro(entregas):
     sistema0= False
     while sistema0 == False:
         print("""
-========== LISTAR ENTREGAS ==========""")
+========== CONSULTAR ENTREGAS ==========""")
         codigo_texto=input("""
 Você quer procurar algum codigo?        
 Qual a sua escolha: (sim / nao) """)
